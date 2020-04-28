@@ -85,6 +85,8 @@ personal notes from ICLR2020
 
 - make use of (originally) misclassified examples. Approach achieved SOTA on MNIST and CIFAR10 adversarial defence... [Improving Adversarial Robustness Requires Revisiting Misclassified Examples](http://www.openreview.net/pdf?id=rklOg6EFwS)
 
+- poisoning network predictions to fool attacker and increase number of attacks needed until succes [Prediction Poisoning: Towards Defenses Against DNN Model Stealing Attacks](http://www.openreview.net/pdf?id=SyevYxHtDB)
+
 ## NAS
 
 - [FasterSeg: Searching for Faster Real-time Semantic Segmentation](http://www.openreview.net/pdf?id=BJgqQ6NYvB)
@@ -107,6 +109,8 @@ personal notes from ICLR2020
 
 ![ELECTRA pretraining](https://user-images.githubusercontent.com/14358106/80499323-82fcb580-8975-11ea-87b3-8ea7a678630b.png)
 
+- The main problem with text GANs (acc to authors) is that Discriminator easily overpowering Generator. To improve Generator training it is rewarded when current generated sentence is better than previously generated sentence [Self-Adversarial Learning with Comparative Discrimination for Text Generation](http://www.openreview.net/pdf?id=B1l8L6EtDS)
+
 - unsupervised text style transfer [code](https://github.com/cindyxinyiwang/deep-latent-sequence-model) [paper](http://www.openreview.net/pdf?id=HJlA0C4tPS)
 
 ## Anomaly detection
@@ -120,6 +124,8 @@ personal notes from ICLR2020
 - Autoregressive decoder speed up [Decoding As Dynamic Programming For Recurrent Autoregressive Models](http://www.openreview.net/pdf?id=HklOo0VFDH)
 
 ## Other (to be organized)
+
+- New NN+tree end2end trained module for tabular data outperforms XGBoost and CatBoost in several datasets [Neural Oblivious Decision Ensembles for Deep Learning on Tabular Data](http://www.openreview.net/pdf?id=r1eiu2VtwH)
 
 - Decision Trees with criteria = linear model on each node with NN approximation. More robust (but most likely slower) [Locally Constant Networks](http://www.openreview.net/pdf?id=Bke8UR4FPB)
 
