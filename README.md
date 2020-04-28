@@ -1,6 +1,18 @@
 # iclr2020-notes
 personal notes from ICLR2020
 
+## Random notes
+
+- amazing pranking [presentation](https://iclr.cc/virtual/poster_H1l_0JBYwS.html)
+
+## Attribution
+
+- New attribution method where unimportant features on feature map are replaced with noise. Converges in ~10 iterations, author also approximated it with single NN which do the same in a single pass. Seems to *really explain* NN predictions (not just exploit the structure of the image). [Restricting the Flow: Information Bottlenecks for Attribution](http://www.openreview.net/pdf?id=S1xWh1rYwB)
+
+![Sanity Check for attribution methods](https://user-images.githubusercontent.com/14358106/80468399-cccea700-8947-11ea-9909-79512cfaf484.png)
+
+![Alpha-Beta LRP fails sanity check (which may be an important property??? as we do not need to train network)](https://user-images.githubusercontent.com/14358106/80468566-00113600-8948-11ea-8732-741e977ed72f.png)
+
 ## Robustness
 
 - Efficient defence against physically-realizable attack is adversarial training by these recipy [Defending Against Physically Realizable Attacks on Image Classification](http://www.openreview.net/pdf?id=H1xscnEKDr)
@@ -43,7 +55,7 @@ personal notes from ICLR2020
 
 - "baseline" for Video Continuation Generation which somehow works; based on VideoBERT + autoregressive model [Scaling Autoregressive Video Models](http://www.openreview.net/pdf?id=rJgsskrFwH)
 
-## GANs
+## Generative Models
 
 - Spectral Norm + Rank Norm to improve generalization (decrease generalization gap). Experiments show that this joint normalization improves both classification and GAN performance. [Stable Rank Normalization for Improved Generalization in Neural Networks and GANs](http://www.openreview.net/pdf?id=H1enKkrFDB)
 
@@ -58,4 +70,20 @@ personal notes from ICLR2020
 - physics-motivated model for videos (beautiful motivation, but works with only very simple systems of objects so far). The idea is to learn encoder from pixel space, Hamiltonian network (which rules the system state) and decoder from latent space back to pixel space. The system evolution is going by adjusting state +alpha * dt, where alpha is speed. In practice it is useless but I liked the idea and motivation. [Hamiltonian Generative Networks](http://www.openreview.net/pdf?id=HJenn6VFvB)
 
 - optimal strategy for both adversarial attack and defence. Done with GAN training, and shown that found generator-attacker really outperforms other attacker approaches [Optimal Strategies Against Generative Attacks](http://www.openreview.net/pdf?id=BkgzMCVtPB)
+
+## Representation
+
+- Supervised learning still performs (much) better, but here are major improvements for unsupervised learning [Self-labelling via simultaneous clustering and representation learning](http://www.openreview.net/pdf?id=Hyx-jyBFPr)
+
+- Representation learned progressively from last NN layer to first NN layer - have reasonable results and ability to control the generation [PROGRESSIVE LEARNING AND DISENTANGLEMENT OF HIERARCHICAL REPRESENTATIONS](http://www.openreview.net/pdf?id=SJxpsxrYPS)
+
+- reasonable experiments on EMNIST for varying symbols with large amount of control [Disentanglement by Nonlinear ICA with General Incompressible-flow Networks (GIN)](http://www.openreview.net/pdf?id=rygeHgSFDH)
+
+## Other (to be organized)
+
+- [Neural tangents](https://github.com/google/neural-tangents) - library for infinite width NNs [paper](http://www.openreview.net/pdf?id=SklD9yrFPS)
+
+![image](https://user-images.githubusercontent.com/14358106/80477440-98151c80-8954-11ea-979a-529d02de1642.png)
+
+![resource requirements](https://user-images.githubusercontent.com/14358106/80477580-da3e5e00-8954-11ea-839c-d8da506761bc.png)
 
