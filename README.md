@@ -7,6 +7,26 @@ personal notes from ICLR2020
 
 - ICLR community seem to embrace tiny datasets (hello, MNIST and CIFAR) and Alexnet model
 
+## Attack and Defence
+
+- optimal strategy for both adversarial attack and defence. Done with GAN training, and shown that found generator-attacker really outperforms other attacker approaches [Optimal Strategies Against Generative Attacks](http://www.openreview.net/pdf?id=BkgzMCVtPB)
+
+- make use of (originally) misclassified examples. Approach achieved SOTA on MNIST and CIFAR10 adversarial defence... [Improving Adversarial Robustness Requires Revisiting Misclassified Examples](http://www.openreview.net/pdf?id=rklOg6EFwS)
+
+- poisoning network predictions to fool attacker and increase number of attacks needed until succes [Prediction Poisoning: Towards Defenses Against DNN Model Stealing Attacks](http://www.openreview.net/pdf?id=SyevYxHtDB)
+
+- mixed precision DNNs are more robust to adversarial attacks (than original non-quantized nets) [EMPIR: Ensembles of Mixed Precision Deep Networks for Increased Robustness Against Adversarial Attacks](http://www.openreview.net/pdf?id=HJem3yHKwH)
+
+- [amazing presentation](https://iclr.cc/virtual/poster_Byl5NREFDr.html) how to attack NLP model with rediculously simple strategy to get only slightly inferior model (attack cost ~few hungred dollars according to the authors) [Thieves on Sesame Street! Model Extraction of BERT-based APIs](http://www.openreview.net/pdf?id=Byl5NREFDr) - now the question is how we can do the same for computer vision tasks?:)
+
+- Efficient defence against physically-realizable attack is adversarial training by these recipy [Defending Against Physically Realizable Attacks on Image Classification](http://www.openreview.net/pdf?id=H1xscnEKDr)
+
+- Skip connections improves adv attacks on another networks [Skip Connections Matter: On the Transferability of Adversarial Examples Generated with ResNets](http://www.openreview.net/pdf?id=BJlRs34Fvr)
+
+- (attack-robust activation) k-winners-take-all defence [Enhancing Adversarial Defense by k-Winners-Take-All](http://www.openreview.net/pdf?id=Skgvy64tvr)
+
+- (comments from sofa == unreliable) there is something called "network verification" which is a direction to verify(proove) certain properties of a model (e.g. robustness to certain type of perturbations - rotations, noise, adversarial, etc). The [work 1](http://www.openreview.net/pdf?id=SJxSDxrKDr) have some theoretical proofs(=verification) that adversarial training improves adversarial robustness and [work 2](http://www.openreview.net/pdf?id=B1evfa4tPB) is fast and efficient verification approach
+
 ## Attribution
 
 - New attribution method where unimportant features on feature map are replaced with noise. Converges in ~10 iterations, author also approximated it with single NN which do the same in a single pass. Seems to *really explain* NN predictions (not just exploit the structure of the image). [Restricting the Flow: Information Bottlenecks for Attribution](http://www.openreview.net/pdf?id=S1xWh1rYwB)
@@ -18,14 +38,6 @@ personal notes from ICLR2020
 ## Robustness
 
 - :question: deformable kernels - seems to be more robust [Deformable Kernels: Adapting Effective Receptive Fields for Object Deformation](http://www.openreview.net/pdf?id=SkxSv6VFvS)
-
-- Efficient defence against physically-realizable attack is adversarial training by these recipy [Defending Against Physically Realizable Attacks on Image Classification](http://www.openreview.net/pdf?id=H1xscnEKDr)
-
-- Skip connections improves adv attacks on another networks [Skip Connections Matter: On the Transferability of Adversarial Examples Generated with ResNets](http://www.openreview.net/pdf?id=BJlRs34Fvr)
-
-- (attack-robust activation) k-winners-take-all defence [Enhancing Adversarial Defense by k-Winners-Take-All](http://www.openreview.net/pdf?id=Skgvy64tvr)
-
-- (comments from sofa == unreliable) there is something called "network verification" which is a direction to verify(proove) certain properties of a model (e.g. robustness to certain type of perturbations - rotations, noise, adversarial, etc). The [work 1](http://www.openreview.net/pdf?id=SJxSDxrKDr) have some theoretical proofs(=verification) that adversarial training improves adversarial robustness and [work 2](http://www.openreview.net/pdf?id=B1evfa4tPB) is fast and efficient verification approach
 
 ## Optimization
 
@@ -89,21 +101,11 @@ personal notes from ICLR2020
 
 - [iclr.video](https://iclr.cc/virtual/poster_Hkxzx0NtDB.html) use classifier as energy function; helps to improve applications of generative models to target tasks (OOD detection, adversarial robustness, etc) [Your classifier is secretly an energy based model and you should treat it like one](http://www.openreview.net/pdf?id=Hkxzx0NtDB)
 
-- How to zoom in/out or shift or ... and to what extent for generated images [On the "steerability" of generative adversarial networks](http://www.openreview.net/pdf?id=HylsTT4FvB)
+- To what extent we can manipulate generated image features (zoom in/out or shift or ...) [On the "steerability" of generative adversarial networks](http://www.openreview.net/pdf?id=HylsTT4FvB)
 
 - physics-motivated model for videos (beautiful motivation, but works with only very simple systems of objects so far). The idea is to learn encoder from pixel space, Hamiltonian network (which rules the system state) and decoder from latent space back to pixel space. The system evolution is going by adjusting state +alpha * dt, where alpha is speed. In practice it is useless but I liked the idea and motivation. [Hamiltonian Generative Networks](http://www.openreview.net/pdf?id=HJenn6VFvB)
 
 - visualization tool and (new) metrics to monitor/estimate convergence of GAN [A Closer Look at the Optimization Landscapes of Generative Adversarial Networks](http://www.openreview.net/pdf?id=HJeVnCEKwH)
-
-- optimal strategy for both adversarial attack and defence. Done with GAN training, and shown that found generator-attacker really outperforms other attacker approaches [Optimal Strategies Against Generative Attacks](http://www.openreview.net/pdf?id=BkgzMCVtPB)
-
-- make use of (originally) misclassified examples. Approach achieved SOTA on MNIST and CIFAR10 adversarial defence... [Improving Adversarial Robustness Requires Revisiting Misclassified Examples](http://www.openreview.net/pdf?id=rklOg6EFwS)
-
-- poisoning network predictions to fool attacker and increase number of attacks needed until succes [Prediction Poisoning: Towards Defenses Against DNN Model Stealing Attacks](http://www.openreview.net/pdf?id=SyevYxHtDB)
-
-- mixed precision DNNs are more robust to adversarial attacks (than original non-quantized nets) [EMPIR: Ensembles of Mixed Precision Deep Networks for Increased Robustness Against Adversarial Attacks](http://www.openreview.net/pdf?id=HJem3yHKwH)
-
-- [amazing presentation](https://iclr.cc/virtual/poster_Byl5NREFDr.html) how to attack NLP model with rediculously simple strategy to get only slightly inferior model (attack cost ~few hungred dollars according to the authors) [Thieves on Sesame Street! Model Extraction of BERT-based APIs](http://www.openreview.net/pdf?id=Byl5NREFDr) - now the question is how we can do the same for computer vision tasks?:)
 
 ## NAS
 
