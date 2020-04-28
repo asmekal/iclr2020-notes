@@ -29,6 +29,8 @@ personal notes from ICLR2020
 
 - double descent (test loss decreases then increases then decreases again with increase in numbe of parameters) is a frequent phenomena [openai paper well describing it]() BUT(!) it is NOT ALWAYS present acc to [this paper](http://www.openreview.net/pdf?id=H1gBsgBYwH)
 
+- Prox-SGD - sgd with explicit regularization which allows to produce sparser networks with no accuracy loss [ProxSGD: Training Structured Neural Networks under Regularization and Constraints](http://www.openreview.net/pdf?id=HygpthEtvr)
+
 ## DL theory
 
 - (see answers below) [How much Position Information Do Convolutional Neural Networks Encode?](http://www.openreview.net/pdf?id=rJeB36NKvB)
@@ -42,6 +44,10 @@ personal notes from ICLR2020
 - vanilla gradient descent is theoretically optimal (surprise!) in speed of convergence against all over gradient-based methods. But in practice it is not (no surprise) because the theoretical constraints are almost never satisfied. In [this work](http://www.openreview.net/pdf?id=BJgnXpVYwS) authors make some analysis and derived that for less-constrained functions grad descent with clipping is optimal. But they again didn't compare with Adam and others...
 
 ![Vanill Grad Descent is theoretically optimal (surprise!)](https://user-images.githubusercontent.com/14358106/80411958-bdaf1100-88d5-11ea-9b48-6b6cfedf22c4.png)
+
+- the image below can give some intuition why compression/quantization works. The paper proves that permulation and rescaling (see below) are the only function-preserving transformation [Functional vs. parametric equivalence of ReLU networks](http://www.openreview.net/pdf?id=Bylx-TNKvH)
+
+![parameter-equivalent networks (for ReLU activation)](https://user-images.githubusercontent.com/14358106/80527877-bd7a4880-899d-11ea-9ede-44670ca34a8c.png)
 
 ## Audio
 
@@ -83,6 +89,8 @@ personal notes from ICLR2020
 
 - [FasterSeg: Searching for Faster Real-time Semantic Segmentation](http://www.openreview.net/pdf?id=BJgqQ6NYvB)
 
+- [NAS-Bench-1Shot1: Benchmarking and Dissecting One-shot Neural Architecture Search](http://www.openreview.net/pdf?id=SJx9ngStPH)
+
 ## Representation
 
 - Supervised learning still performs (much) better, but here are major improvements for unsupervised learning [Self-labelling via simultaneous clustering and representation learning](http://www.openreview.net/pdf?id=Hyx-jyBFPr)
@@ -100,6 +108,10 @@ personal notes from ICLR2020
 ![ELECTRA pretraining](https://user-images.githubusercontent.com/14358106/80499323-82fcb580-8975-11ea-87b3-8ea7a678630b.png)
 
 - unsupervised text style transfer [code](https://github.com/cindyxinyiwang/deep-latent-sequence-model) [paper](http://www.openreview.net/pdf?id=HJlA0C4tPS)
+
+## Anomaly detection
+
+- main idea is to detect anomaly regions as regions with high difference between original and AE-reconstructed image; solved by gradient minimization of Reconstruction loss (x_i) + ||x_i - x_orig||; looks like anomaly localization improves [Iterative energy-based projection on a normal data manifold for anomaly localization](http://www.openreview.net/pdf?id=HJx81ySKwr)
 
 ## Speed improvements
 
