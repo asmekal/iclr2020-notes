@@ -129,6 +129,8 @@ personal notes from ICLR2020
 
 - BLUE is finally sentenced to death [BERTScore: Evaluating Text Generation with BERT](http://www.openreview.net/pdf?id=SkeHuCVFDr)
 
+![GPUs go brrr](https://user-images.githubusercontent.com/14358106/80547651-6c7c4b80-89c1-11ea-9956-72f6d9c7d7b4.png)
+
 - Nuclear Sampling: instead of top-k most probable words take top-p (sum of top-m words probabilities >= p) [The Curious Case of Neural Text Degeneration](http://www.openreview.net/pdf?id=rygGQyrFvH)
 
 - Unlikelihood (which *outperforms* nuclear sampling from above :point_up: significantly) - the idea is to penalize unlikely situations (negative examples which are either 1)random or 2)repeting words) [Neural Text Generation With Unlikelihood Training](http://www.openreview.net/pdf?id=SJeYe0NtvH)
