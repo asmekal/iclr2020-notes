@@ -5,6 +5,8 @@ personal notes from ICLR2020
 
 - amazing pranking [presentation](https://iclr.cc/virtual/poster_H1l_0JBYwS.html)
 
+- ICLR community seem to embrace tiny datasets (hello, MNIST and CIFAR) and Alexnet model
+
 ## Attribution
 
 - New attribution method where unimportant features on feature map are replaced with noise. Converges in ~10 iterations, author also approximated it with single NN which do the same in a single pass. Seems to *really explain* NN predictions (not just exploit the structure of the image). [Restricting the Flow: Information Bottlenecks for Attribution](http://www.openreview.net/pdf?id=S1xWh1rYwB)
@@ -14,6 +16,8 @@ personal notes from ICLR2020
 ![Alpha-Beta LRP fails sanity check (which may be an important property??? as we do not need to train network)](https://user-images.githubusercontent.com/14358106/80468566-00113600-8948-11ea-8732-741e977ed72f.png)
 
 ## Robustness
+
+- :question: deformable kernels - seems to be more robust [Deformable Kernels: Adapting Effective Receptive Fields for Object Deformation](http://www.openreview.net/pdf?id=SkxSv6VFvS)
 
 - Efficient defence against physically-realizable attack is adversarial training by these recipy [Defending Against Physically Realizable Attacks on Image Classification](http://www.openreview.net/pdf?id=H1xscnEKDr)
 
@@ -45,6 +49,10 @@ personal notes from ICLR2020
 
 ![Vanill Grad Descent is theoretically optimal (surprise!)](https://user-images.githubusercontent.com/14358106/80411958-bdaf1100-88d5-11ea-9b48-6b6cfedf22c4.png)
 
+- another work on gradient clipping proved that it does not fight against noisy labels, but 'partial' clipping (see paper for details) does [Can gradient clipping mitigate label noise?](http://www.openreview.net/pdf?id=rklB76EKPr)
+
+![gradient clipping does not help against bad labels, but 'partial' clipping does](https://user-images.githubusercontent.com/14358106/80533600-8eb4a000-89a6-11ea-817b-e360eb681d83.png)
+
 - the image below can give some intuition why compression/quantization works. The paper proves that permulation and rescaling (see below) are the only function-preserving transformation [Functional vs. parametric equivalence of ReLU networks](http://www.openreview.net/pdf?id=Bylx-TNKvH)
 
 ![parameter-equivalent networks (for ReLU activation)](https://user-images.githubusercontent.com/14358106/80527877-bd7a4880-899d-11ea-9ede-44670ca34a8c.png)
@@ -62,6 +70,8 @@ personal notes from ICLR2020
 - guys implemented conventional audio filters and the results are just fantastic quality - they used tiny models and have high quality results [paper](http://www.openreview.net/pdf?id=B1x1ma4tDr) [github](https://github.com/magenta/ddsp)
 
 - harmonic convolution [Deep Audio Priors Emerge From Harmonic Convolutional Networks](http://www.openreview.net/pdf?id=rygjHxrYDB)
+
+- nlp-inspired pretraining for speech representing it as discrite vocabulary [vq-wav2vec: Self-Supervised Learning of Discrete Speech Representations](http://www.openreview.net/pdf?id=rylwJxrYDS)
 
 ## Video
 
@@ -87,6 +97,8 @@ personal notes from ICLR2020
 
 - poisoning network predictions to fool attacker and increase number of attacks needed until succes [Prediction Poisoning: Towards Defenses Against DNN Model Stealing Attacks](http://www.openreview.net/pdf?id=SyevYxHtDB)
 
+- mixed precision DNNs are more robust to adversarial attacks (than original non-quantized nets) [EMPIR: Ensembles of Mixed Precision Deep Networks for Increased Robustness Against Adversarial Attacks](http://www.openreview.net/pdf?id=HJem3yHKwH)
+
 ## NAS
 
 - [FasterSeg: Searching for Faster Real-time Semantic Segmentation](http://www.openreview.net/pdf?id=BJgqQ6NYvB)
@@ -108,6 +120,8 @@ personal notes from ICLR2020
 - [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators](http://www.openreview.net/pdf?id=r1xMH1BtvB)
 
 ![ELECTRA pretraining](https://user-images.githubusercontent.com/14358106/80499323-82fcb580-8975-11ea-87b3-8ea7a678630b.png)
+
+- yes [Are Transformers universal approximators of sequence-to-sequence functions?](http://www.openreview.net/pdf?id=ByxRM0Ntvr)
 
 - The main problem with text GANs (acc to authors) is that Discriminator easily overpowering Generator. To improve Generator training it is rewarded when current generated sentence is better than previously generated sentence [Self-Adversarial Learning with Comparative Discrimination for Text Generation](http://www.openreview.net/pdf?id=B1l8L6EtDS)
 
