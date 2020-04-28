@@ -87,9 +87,13 @@ personal notes from ICLR2020
 
 ![RealnessGAN](https://user-images.githubusercontent.com/14358106/80428366-5784b700-88f2-11ea-850e-daeee64cc0df.png)
 
-- [iclr.video](https://iclr.cc/virtual/poster_Hkxzx0NtDB.html) use classifier as energy function; helps to improve applications of generative models to target tasks (OOD detection, adversarial robustness, etc) [Your classifier is secretly an energy based model and you should treat it like one](http://www.openreview.net/pdf?id=Hkxzx0NtDB) 
+- [iclr.video](https://iclr.cc/virtual/poster_Hkxzx0NtDB.html) use classifier as energy function; helps to improve applications of generative models to target tasks (OOD detection, adversarial robustness, etc) [Your classifier is secretly an energy based model and you should treat it like one](http://www.openreview.net/pdf?id=Hkxzx0NtDB)
+
+- How to zoom in/out or shift or ... and to what extent for generated images [On the "steerability" of generative adversarial networks](http://www.openreview.net/pdf?id=HylsTT4FvB)
 
 - physics-motivated model for videos (beautiful motivation, but works with only very simple systems of objects so far). The idea is to learn encoder from pixel space, Hamiltonian network (which rules the system state) and decoder from latent space back to pixel space. The system evolution is going by adjusting state +alpha * dt, where alpha is speed. In practice it is useless but I liked the idea and motivation. [Hamiltonian Generative Networks](http://www.openreview.net/pdf?id=HJenn6VFvB)
+
+- visualization tool and (new) metrics to monitor/estimate convergence of GAN [A Closer Look at the Optimization Landscapes of Generative Adversarial Networks](http://www.openreview.net/pdf?id=HJeVnCEKwH)
 
 - optimal strategy for both adversarial attack and defence. Done with GAN training, and shown that found generator-attacker really outperforms other attacker approaches [Optimal Strategies Against Generative Attacks](http://www.openreview.net/pdf?id=BkgzMCVtPB)
 
@@ -98,6 +102,8 @@ personal notes from ICLR2020
 - poisoning network predictions to fool attacker and increase number of attacks needed until succes [Prediction Poisoning: Towards Defenses Against DNN Model Stealing Attacks](http://www.openreview.net/pdf?id=SyevYxHtDB)
 
 - mixed precision DNNs are more robust to adversarial attacks (than original non-quantized nets) [EMPIR: Ensembles of Mixed Precision Deep Networks for Increased Robustness Against Adversarial Attacks](http://www.openreview.net/pdf?id=HJem3yHKwH)
+
+- [amazing presentation](https://iclr.cc/virtual/poster_Byl5NREFDr.html) how to attack NLP model with rediculously simple strategy to get only slightly inferior model (attack cost ~few hungred dollars according to the authors) [Thieves on Sesame Street! Model Extraction of BERT-based APIs](http://www.openreview.net/pdf?id=Byl5NREFDr) - now the question is how we can do the same for computer vision tasks?:)
 
 ## NAS
 
@@ -113,7 +119,17 @@ personal notes from ICLR2020
 
 - reasonable experiments on EMNIST for varying symbols with large amount of control [Disentanglement by Nonlinear ICA with General Incompressible-flow Networks (GIN)](http://www.openreview.net/pdf?id=rygeHgSFDH)
 
+## Vision (surprise!)
+
+- :question: Space2Vec - embedding for spacial locations (as far as I understood only for geolocations not for (x,y) on the image) -> use in classification [Multi-Scale Representation Learning for Spatial Feature Distributions using Grid Cells](http://www.openreview.net/pdf?id=rJljdh4KDH)
+
 ## NLP
+
+- BLUE is finally sentenced to death [BERTScore: Evaluating Text Generation with BERT](http://www.openreview.net/pdf?id=SkeHuCVFDr)
+
+- Nuclear Sampling: instead of top-k most probable words take top-p (sum of top-m words probabilities >= p) [The Curious Case of Neural Text Degeneration](http://www.openreview.net/pdf?id=rygGQyrFvH)
+
+- Unlikelihood (which *outperforms* nuclear sampling from above :point_up: significantly) - the idea is to penalize unlikely situations (negative examples which are either 1)random or 2)repeting words) [Neural Text Generation With Unlikelihood Training](http://www.openreview.net/pdf?id=SJeYe0NtvH)
 
 - :grey_question: Controllable generation with language models [Plug and Play Language Models: A Simple Approach to Controlled Text Generation](http://www.openreview.net/pdf?id=H1edEyBKDS)
 
@@ -138,6 +154,10 @@ personal notes from ICLR2020
 - Autoregressive decoder speed up [Decoding As Dynamic Programming For Recurrent Autoregressive Models](http://www.openreview.net/pdf?id=HklOo0VFDH)
 
 ## Other (to be organized)
+
+- how to measure quality on test set with noisy labels? see :point_down: (exact formula in the paper) [Discrepancy Ratio: Evaluating Model Performance When Even Experts Disagree on the Truth](http://www.openreview.net/pdf?id=Byg-wJSYDS)
+
+![discrepancy formula](https://user-images.githubusercontent.com/14358106/80544948-dba27180-89ba-11ea-9037-3704f61af177.png)
 
 - New NN+tree end2end trained module for tabular data outperforms XGBoost and CatBoost in several datasets [Neural Oblivious Decision Ensembles for Deep Learning on Tabular Data](http://www.openreview.net/pdf?id=r1eiu2VtwH)
 
