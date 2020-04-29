@@ -41,6 +41,14 @@ personal notes from ICLR2020
 
 ## Optimization
 
+- GSNR = mean^2 / variance or gradients gives an estimation of generalization on test set (the higher - the better) [Understanding Why Neural Networks Generalize Well Through GSNR of Parameters](http://www.openreview.net/pdf?id=HyevIJStwH)
+
+- exponential lr also converge (to the comparable results) for wide range of DL models which has normalization, which rases a questions about learning schedulers in general - is it even worth trying to wary them [An Exponential Learning Rate Schedule for Deep Learning](http://www.openreview.net/pdf?id=rJg8TeSFDH)
+
+![exponential lr decay really works...](https://user-images.githubusercontent.com/14358106/80638665-7e192e00-8a69-11ea-8d91-88f05bc251c4.png)
+
+![what about learning rates](https://user-images.githubusercontent.com/14358106/80637732-262df780-8a68-11ea-8fd6-24b5315199c6.png)
+
 - most likely the best high dimensional optimization without gradients; by Google Brain; maybe useful for hyperparameter search/NAS? [Gradientless Descent: High-Dimensional Zeroth-Order Optimization](http://www.openreview.net/pdf?id=Skep6TVYDB)
 
 - double descent (test loss decreases then increases then decreases again with increase in numbe of parameters) is a frequent phenomena [openai paper well describing it]() BUT(!) it is NOT ALWAYS present acc to [this paper](http://www.openreview.net/pdf?id=H1gBsgBYwH)
@@ -68,6 +76,10 @@ personal notes from ICLR2020
 - the image below can give some intuition why compression/quantization works. The paper proves that permulation and rescaling (see below) are the only function-preserving transformation [Functional vs. parametric equivalence of ReLU networks](http://www.openreview.net/pdf?id=Bylx-TNKvH)
 
 ![parameter-equivalent networks (for ReLU activation)](https://user-images.githubusercontent.com/14358106/80527877-bd7a4880-899d-11ea-9ede-44670ca34a8c.png)
+
+- [What Can Neural Networks Reason About?](http://www.openreview.net/pdf?id=rJxbJeHFPS)
+
+![image](https://user-images.githubusercontent.com/14358106/80643828-65147b00-8a71-11ea-90ee-fae0699a52a0.png)
 
 ## Audio
 
