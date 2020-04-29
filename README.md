@@ -167,9 +167,15 @@ personal notes from ICLR2020
 
 - [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators](http://www.openreview.net/pdf?id=r1xMH1BtvB)
 
+- [Reformer: The Efficient Transformer](http://www.openreview.net/pdf?id=rkgNKkHtvB)
+
+- tiny change in LSTM which make it better than your Transformer, die BERT! (ok, it won't but the idea is simple but working) [Mogrifier LSTM](http://www.openreview.net/pdf?id=SJe5P6EYvS)
+
 ![ELECTRA pretraining](https://user-images.githubusercontent.com/14358106/80499323-82fcb580-8975-11ea-87b3-8ea7a678630b.png)
 
 - yes [Are Transformers universal approximators of sequence-to-sequence functions?](http://www.openreview.net/pdf?id=ByxRM0Ntvr)
+
+- Transformer solves math problems much better than Wolphram alpha (with pretty straightforward approach) [Deep Learning For Symbolic Mathematics](http://www.openreview.net/pdf?id=S1eZYeHFDS)
 
 - The main problem with text GANs (acc to authors) is that Discriminator easily overpowering Generator. To improve Generator training it is rewarded when current generated sentence is better than previously generated sentence [Self-Adversarial Learning with Comparative Discrimination for Text Generation](http://www.openreview.net/pdf?id=B1l8L6EtDS)
 
@@ -187,6 +193,8 @@ personal notes from ICLR2020
 
 ## Other (to be organized)
 
+- how to learn from rule-based (automatically) generated markup - method can significantly improve performance [Learning from Rules Generalizing Labeled Exemplars](http://www.openreview.net/pdf?id=SkeuexBtDr)
+
 - how to measure quality on test set with noisy labels? see :point_down: (exact formula in the paper) [Discrepancy Ratio: Evaluating Model Performance When Even Experts Disagree on the Truth](http://www.openreview.net/pdf?id=Byg-wJSYDS)
 
 ![discrepancy formula](https://user-images.githubusercontent.com/14358106/80544948-dba27180-89ba-11ea-9037-3704f61af177.png)
@@ -200,4 +208,6 @@ personal notes from ICLR2020
 ![image](https://user-images.githubusercontent.com/14358106/80477440-98151c80-8954-11ea-979a-529d02de1642.png)
 
 ![resource requirements](https://user-images.githubusercontent.com/14358106/80477580-da3e5e00-8954-11ea-839c-d8da506761bc.png)
+
+- exploring continuous game of life [Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems](http://www.openreview.net/pdf?id=rkg6sJHYDr)
 
