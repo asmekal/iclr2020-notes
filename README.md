@@ -65,6 +65,14 @@ personal notes from ICLR2020
 
 ## DL theory
 
+- disproving false claims (see slides below): suboptimal local minima DO exist (that's why initialization matters), l2 norm regularization DECREASES performance, rank minimization DECREASES performance [Truth or backpropaganda? An empirical investigation of deep learning theory](http://www.openreview.net/pdf?id=HyxyIgHFvr)
+
+![myths outline](https://user-images.githubusercontent.com/14358106/80647920-ecfd8380-8a77-11ea-8f48-6003b1ce97aa.png)
+![suboptimal local minima](https://user-images.githubusercontent.com/14358106/80648042-2504c680-8a78-11ea-9b69-6c6cc2284ecf.png)
+![l2 norm regularization decrease performance](https://user-images.githubusercontent.com/14358106/80648084-364dd300-8a78-11ea-899d-a30651743234.png)
+![rank minimization decrease performance](https://user-images.githubusercontent.com/14358106/80648129-49f93980-8a78-11ea-9886-6707bd35024f.png)
+
+
 - (see answers below) [How much Position Information Do Convolutional Neural Networks Encode?](http://www.openreview.net/pdf?id=rJeB36NKvB)
 
 ![how much position information is endoded?](https://user-images.githubusercontent.com/14358106/80418518-36b36600-88e0-11ea-9b92-471f34ad71cd.png)
