@@ -41,7 +41,15 @@ personal notes from ICLR2020
 
 ## Optimization
 
+### Generalization gap estimation
+
+**This part is about estimation of test loss knowing train loss, i.e. $L_{test} = L_{train} + G$, where $G$ is generalization gap**. In theory if the estimation is reliable it will allow to merge train and validation (so to have more data) and estimate best model / best training epoch reliably *without validation data*.
+
 - GSNR = mean^2 / variance or gradients gives an estimation of generalization on test set (the higher - the better) [Understanding Why Neural Networks Generalize Well Through GSNR of Parameters](http://www.openreview.net/pdf?id=HyevIJStwH)
+
+- another work on generalization gap estimation (upper bound). It turns out that if we have a trained network and replace one fixed layer the loss will not increase drastically for most of the layers chosen. In fact only small amount of layers (called 'critical' in the paper) will severly affect performance after such transformation. The method could predict e.g. that trained resnet18 has larger generalization gap than resnet34 [The intriguing role of module criticality in the generalization of deep networks](http://www.openreview.net/pdf?id=S1e4jkSKvB)
+
+### [Generalization gap ends]
 
 - exponential lr also converge (to the comparable results) for wide range of DL models which has normalization, which rases a questions about learning schedulers in general - is it even worth trying to wary them [An Exponential Learning Rate Schedule for Deep Learning](http://www.openreview.net/pdf?id=rJg8TeSFDH)
 
