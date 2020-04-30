@@ -143,9 +143,13 @@ personal notes from ICLR2020
 
 ![robust darts takeaways](https://user-images.githubusercontent.com/14358106/80723246-12869d80-8b09-11ea-90c3-d51aaee8dba5.png)
 
+- 1.5 GPU hours on cifar search (4-10 times faster than DARTS) - results better than DARTS [PC-DARTS: Partial Channel Connections for Memory-Efficient Architecture Search](https://openreview.net/pdf?id=BJlS634tPr)
+
 - Early research about how to initialize Meta-networks (networks which emit other networks, e.g. NAS). Authors propose efficient initialization, but there are some restrictions in the search space. This is a very early research and acc to authors there are a lot of low hanging fruits in that direction. In [presentation](https://iclr.cc/virtual/poster_H1lma24tPB.html) authors very clearly explain that initialization is crusial as with bad initialization models will not converge at all. [Principled Weight Initialization for Hypernetworks](http://www.openreview.net/pdf?id=H1lma24tPB)
 
 - [FasterSeg: Searching for Faster Real-time Semantic Segmentation](http://www.openreview.net/pdf?id=BJgqQ6NYvB)
+
+- 10 NAS algorithms on search space of 15k architectures (all 15k trained) [NAS-Bench-201: Extending the Scope of Reproducible Neural Architecture Search](http://www.openreview.net/pdf?id=HJxyZkBKDr)
 
 - [NAS-Bench-1Shot1: Benchmarking and Dissecting One-shot Neural Architecture Search](http://www.openreview.net/pdf?id=SJx9ngStPH)
 
@@ -162,6 +166,21 @@ personal notes from ICLR2020
 ## Vision (surprise!)
 
 - :question: Space2Vec - embedding for spacial locations (as far as I understood only for geolocations not for (x,y) on the image) -> use in classification [Multi-Scale Representation Learning for Spatial Feature Distributions using Grid Cells](http://www.openreview.net/pdf?id=rJljdh4KDH)
+
+## Layers
+
+- superior results against for 10 most popular architectures replacing batchnorm with deconvolution. Can be efficiently calculated at a fraction of conv layer cost. Authors replaced batchnorms with network deconvolution and gain superior results on all architectures they tried. There is also a connection with brain (a speciall kind of vision operation). The intuition behind - the layer is decorrelating neighbouring pixels and channels so it is much easier for NN to learn. [Network Deconvolution](http://www.openreview.net/pdf?id=rkeu30EtvS)
+
+![what if...](https://user-images.githubusercontent.com/14358106/80729217-92fccc80-8b10-11ea-8e98-0a8a1edaba3b.png)
+
+![deconvolution operation](https://user-images.githubusercontent.com/14358106/80730943-e5d78380-8b12-11ea-804a-388e527760fb.png)
+
+![deconvolution applied to image](https://user-images.githubusercontent.com/14358106/80731086-1f0ff380-8b13-11ea-8981-f7f5ab4b03b5.png)
+
+![deconvolution algorithm](https://user-images.githubusercontent.com/14358106/80731699-eb819900-8b13-11ea-98c7-c60a6f741cad.png)
+
+
+- if you somehow know that your network should know exact multiplication/addition of tensor elements (e.g. physics, math problems) [Neural Arithmetic Units](https://openreview.net/pdf?id=H1gNOeHKPS)
 
 ## NLP
 
