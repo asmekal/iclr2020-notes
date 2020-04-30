@@ -196,11 +196,13 @@ personal notes from ICLR2020
 
 - [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators](http://www.openreview.net/pdf?id=r1xMH1BtvB)
 
+![ELECTRA pretraining](https://user-images.githubusercontent.com/14358106/80499323-82fcb580-8975-11ea-87b3-8ea7a678630b.png)
+
 - [Reformer: The Efficient Transformer](http://www.openreview.net/pdf?id=rkgNKkHtvB)
 
-- tiny change in LSTM which make it better than your Transformer, die BERT! (ok, it won't but the idea is simple but working) [Mogrifier LSTM](http://www.openreview.net/pdf?id=SJe5P6EYvS)
+- [ALBERT: A Lite BERT for Self-supervised Learning of Language Representations](http://www.openreview.net/pdf?id=H1eA7AEtvS)
 
-![ELECTRA pretraining](https://user-images.githubusercontent.com/14358106/80499323-82fcb580-8975-11ea-87b3-8ea7a678630b.png)
+- tiny change in LSTM which make it better than your Transformer, die BERT! (ok, it won't but the idea is simple but working) [Mogrifier LSTM](http://www.openreview.net/pdf?id=SJe5P6EYvS)
 
 - yes [Are Transformers universal approximators of sequence-to-sequence functions?](http://www.openreview.net/pdf?id=ByxRM0Ntvr)
 
