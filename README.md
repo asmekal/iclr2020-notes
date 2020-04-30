@@ -29,6 +29,8 @@ personal notes from ICLR2020
 
 ## Attribution
 
+- method which explains *how* and *why* particular regions of the input image are responsible for classifier prediction. The method is to train external Generator (which will generate degraded image similar to input, e.g. if classifier outputs 0.9 probability, generator receives input image and desire to make classifier have 0.1 probability) and Discriminator trained with KL divergence from actual output of the classifier and L1 distance loss to the original input. The methos is applicable to the cases then *how* and *why* of the classifier model are important (e.g. medical applications). However, it requires to train additional model (which is GAN so the training won't be easy) instead of most of attribution methods which can be directly applied to classifier any additional training and external models [Explanation by Progressive Exaggeration](http://www.openreview.net/pdf?id=H1xFWgrFPS)
+
 - New attribution method where unimportant features on feature map are replaced with noise. Converges in ~10 iterations, author also approximated it with single NN which do the same in a single pass. Seems to *really explain* NN predictions (not just exploit the structure of the image). [Restricting the Flow: Information Bottlenecks for Attribution](http://www.openreview.net/pdf?id=S1xWh1rYwB)
 
 ![Sanity Check for attribution methods](https://user-images.githubusercontent.com/14358106/80468399-cccea700-8947-11ea-9909-79512cfaf484.png)
@@ -137,11 +139,15 @@ personal notes from ICLR2020
 
 ## NAS
 
+- Early research about how to initialize Meta-networks (networks which emit other networks, e.g. NAS). Authors propose efficient initialization, but there are some restrictions in the search space. This is a very early research and acc to authors there are a lot of low hanging fruits in that direction. In [presentation](https://iclr.cc/virtual/poster_H1lma24tPB.html) authors very clearly explain that initialization is crusial as with bad initialization models will not converge at all. [Principled Weight Initialization for Hypernetworks](http://www.openreview.net/pdf?id=H1lma24tPB)
+
 - [FasterSeg: Searching for Faster Real-time Semantic Segmentation](http://www.openreview.net/pdf?id=BJgqQ6NYvB)
 
 - [NAS-Bench-1Shot1: Benchmarking and Dissecting One-shot Neural Architecture Search](http://www.openreview.net/pdf?id=SJx9ngStPH)
 
 ## Representation
+
+- How to make model better generalize on unseen (related but different) domains by plugging special feature transformation layers into model [Cross-Domain Few-Shot Classification via Learned Feature-Wise Transformation](http://www.openreview.net/pdf?id=SJl5Np4tPr)
 
 - Supervised learning still performs (much) better, but here are major improvements for unsupervised learning [Self-labelling via simultaneous clustering and representation learning](http://www.openreview.net/pdf?id=Hyx-jyBFPr)
 
@@ -192,6 +198,8 @@ personal notes from ICLR2020
 - Autoregressive decoder speed up [Decoding As Dynamic Programming For Recurrent Autoregressive Models](http://www.openreview.net/pdf?id=HklOo0VFDH)
 
 ## Other (to be organized)
+
+- BackPACK - wrapper for pytorch to estimate several gradient statistics, works reasonably fast, but some features do not support branching and custom forward implementations [BackPACK: Packing more into Backprop](http://www.openreview.net/pdf?id=BJlrF24twB)
 
 - how to learn from rule-based (automatically) generated markup - method can significantly improve performance [Learning from Rules Generalizing Labeled Exemplars](http://www.openreview.net/pdf?id=SkeuexBtDr)
 
