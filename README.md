@@ -139,6 +139,10 @@ personal notes from ICLR2020
 
 ## NAS
 
+- The authors show that DARTS method overfits on validation data and do not generalize well on test data for several search spaces. The reason for poor generalization is highly correlated with sharpness of the minima. The sharpness of the minima can be efficiently estimated by computing largest singular value of full Hessian w.r.t. alpha on randomly taken validation batch. We can then track this metric (largest eigenvalue) and do early stopping (DARTS-ES) when it starts to grow too rapidly. DARTS-ES already increases performance, but this can be further improved. Authors show that regularization (e.g. L2 norm) stabilizes largest eigenvalue metric, thus they propose the following method. Whenever sharp increases of eigenvalue is observed, the model goes back to the last checkpoint before that behavious starts, and training continues with higher regularization. This approach improve generalization significantly in many settings, including original DARTS search space. [Understanding and Robustifying Differentiable Architecture Search](http://www.openreview.net/pdf?id=H1gDNyrKDS)
+
+![robust darts takeaways](https://user-images.githubusercontent.com/14358106/80723246-12869d80-8b09-11ea-90c3-d51aaee8dba5.png)
+
 - Early research about how to initialize Meta-networks (networks which emit other networks, e.g. NAS). Authors propose efficient initialization, but there are some restrictions in the search space. This is a very early research and acc to authors there are a lot of low hanging fruits in that direction. In [presentation](https://iclr.cc/virtual/poster_H1lma24tPB.html) authors very clearly explain that initialization is crusial as with bad initialization models will not converge at all. [Principled Weight Initialization for Hypernetworks](http://www.openreview.net/pdf?id=H1lma24tPB)
 
 - [FasterSeg: Searching for Faster Real-time Semantic Segmentation](http://www.openreview.net/pdf?id=BJgqQ6NYvB)
