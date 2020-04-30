@@ -121,6 +121,8 @@ personal notes from ICLR2020
 
 ## Generative Models
 
+- theoretical analysis of GANs lead to combining several discriminator objective into 'supergan' which shouls converge more stable in theory [Smoothness and Stability in GANs](http://www.openreview.net/pdf?id=HJeOekHKwr)
+
 - Spectral Norm + Rank Norm to improve generalization (decrease generalization gap). Experiments show that this joint normalization improves both classification and GAN performance. [Stable Rank Normalization for Improved Generalization in Neural Networks and GANs](http://www.openreview.net/pdf?id=H1enKkrFDB)
 
 ![generalization gap upper bound](https://user-images.githubusercontent.com/14358106/80425335-1c7f8500-88ec-11ea-8a00-2e4584449989.png)
