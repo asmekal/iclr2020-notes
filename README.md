@@ -1,6 +1,10 @@
 # iclr2020-notes
 personal notes from ICLR2020
 
+all presentations are now publicly available
+
+official [reflections](https://medium.com/@iclr_conf/gone-virtual-lessons-from-iclr2020-1743ce6164a3) on the conference
+
 ## Random notes
 
 - amazing pranking [presentation](https://iclr.cc/virtual/poster_H1l_0JBYwS.html)
