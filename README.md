@@ -1,5 +1,5 @@
 # iclr2020-notes
-personal notes from ICLR2020
+personal notes from ICLR2020 (still in progress, summary will appear later)
 
 all presentations are now publicly available
 
