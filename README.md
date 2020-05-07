@@ -1,15 +1,81 @@
 # iclr2020-notes
 personal notes from ICLR2020 (still in progress, summary will appear later)
 
-all presentations are now publicly available
+## General Notes
 
-official [reflections](https://medium.com/@iclr_conf/gone-virtual-lessons-from-iclr2020-1743ce6164a3) on the conference
+### Main links (official)
 
-## Random notes
+Main page https://iclr.cc/
 
-- amazing pranking [presentation](https://iclr.cc/virtual/poster_H1l_0JBYwS.html)
+[Virtual format notes (medium)](https://medium.com/@iclr_conf/format-for-the-iclr2020-virtual-conference-76716ddea640)
 
-- ICLR community seem to embrace tiny datasets (hello, MNIST and CIFAR) and Alexnet model
+All contents https://iclr.cc/virtual_2020/
+
+[Reflections after the conference (medium)](https://medium.com/@iclr_conf/gone-virtual-lessons-from-iclr2020-1743ce6164a3)
+
+### Comments about format
+
+ICLR'20 due to well-known circumstences were held online world-wide from 26 to 30 April. In a week after conference ended organizers made all of the materials public - https://iclr.cc/virtual_2020/
+
+All of the papers were presented by 5 min video - both posters and orals. Great works were up to 15 mins. Five poster sessions every day, each work was presented on exactly two of them. During presentation time authors held meetings in zoom rooms and can be asked directly. But for me much simpler way to ask was to write in rocket-chat (each poster had its own channel there) and ask there not waiting until particular time.
+
+Oral presentations were cool and useful (not always, but often), but I was missing the posters in the form of 'virtual pieces of paper' because it would be much simpler to understand the idea of the work seeing its entirely in one image instead of scrolling the slides.
+
+### Me on conference
+
+From ~650 accepted papers I looked on ~100, summarizing (in most cases just minor comment or mention) them below in this document. I tried to group them by contents if possible.
+
+This time I were unable to look on all interesting papers I wanted to. Which means that each section of this document can miss importatn works in the domain. I still have ~70 important papers in the queue to watch later... Maybe one day I will take a look and summarize them, maybe...
+
+In general I tried to broaden my horizons in many topics like GANs, NAS, Optimization, DL Theory, Adversarial examples, Vision/NLP/Audio/Video processing. I skipped entirely prunning/quantization and too theoretical works.
+
+If the paper has :question: - it means that paper looks good, but I didn't understand something and I am not confident in the comment I write here.
+
+## Key takeaways (TL;DR)
+
+### Attack & Defence
+
+- Now you can steal model by API which returns only its predictions (and save a lot of money $$$) - checked for BERT-like NLP models, could the same be done for CV tasks?
+
+- There is a way to defend from physically-realizable attacks (doing adversarial in the real world)
+
+- Proper usage of misclassified examples can improve robustness to adversarial examples
+
+### Optimization
+
+- There are methods to estimate generalization gap knowing only train error (metric). The formula is `test_loss < train_loss + G` where G is generalization gap. And this `G` can be estimated on train data only. Which means that in theory you can use more training data joining validation set as it is no longer needed to select the best epoch or when to stop training. Joining validation to training may be used for some critical applications where each point of accuracy is really important (because increasing your data by 20% does not give you much in most cases - you will need 10x increase to go significantly better). Anyway, some works to estimate `G` are in this report, see below.
+
+- Exponential learning rate also works! Yes, you can increase lr to, say, `1e22` and you will still converge. Moreover authors of that work found a way to train with exponential lr with same quality as constant/cosine schedule. The key result here - **there are always many good lr schedules** which will lead to same results. However, the questions "so which one of them is the best?" or "which lr schedule generalize well for more problems?" still remains.
+
+- ICLR community seem to embrace tiny datasets (hello, MNIST and CIFAR) and Alexnet model which makes research simpler and faster, but often useless for applications, due to lack of generalization of larger datasets
+
+### DL Theory
+
+- Backpropaganda: several conventional myths disproved empirically. 1)**suboptimal local minima DO exist** (that's why initialization matters); 2)**l2 norm regularization DECREASES performance**; 3)**rank minimization DECREASES performance**
+
+- Vanilla Grad Descent under certain assumptions of the problem is optimal (which means that **no other gradient-based method can converge faster!**) but in practice these assumptions not (never?=)) satisfied, so your Adam will work better. One of the works prove that on weaker set of assumptions clipped SGD is optimal (most likely it is still useless for real problems).
+
+### GANs
+
+- **(insane) Faces can be synthesized from audio** - it really works to some extent
+
+- DeepMind proved that high-fidelity speed can be generated with GANs (which is faster than augoregressive wavenet)
+
+- Stable Rank Normalization: Spectral Norm + Rank Norm to improve generalization (decrease generalization gap)
+
+### NAS
+
+- Robust DARTS - super simple approach to train DARTS much better by early stopping + continuation with more regularization (see details below)
+
+### Layers
+
+- Deconvolution - **modification to vanilla convolution which is free on inference, improves robustness for all conventional models where it was applied**. The only cost is training time increase (up to 10x in my test). See details below
+
+### NLP
+
+- Just see NLP section, everything there is good:)
+
+# Summaries and comments
 
 ## Attack and Defence
 
@@ -228,7 +294,7 @@ official [reflections](https://medium.com/@iclr_conf/gone-virtual-lessons-from-i
 
 - Autoregressive decoder speed up [Decoding As Dynamic Programming For Recurrent Autoregressive Models](http://www.openreview.net/pdf?id=HklOo0VFDH)
 
-## Other (to be organized)
+## Other (random topics)
 
 - BackPACK - wrapper for pytorch to estimate several gradient statistics, works reasonably fast, but some features do not support branching and custom forward implementations [BackPACK: Packing more into Backprop](http://www.openreview.net/pdf?id=BJlrF24twB)
 
@@ -249,4 +315,6 @@ official [reflections](https://medium.com/@iclr_conf/gone-virtual-lessons-from-i
 ![resource requirements](https://user-images.githubusercontent.com/14358106/80477580-da3e5e00-8954-11ea-839c-d8da506761bc.png)
 
 - exploring continuous game of life [Intrinsically Motivated Discovery of Diverse Patterns in Self-Organizing Systems](http://www.openreview.net/pdf?id=rkg6sJHYDr)
+
+- amazing pranking [presentation](https://iclr.cc/virtual/poster_H1l_0JBYwS.html) - I hated the presenter very much sitting at home=)
 
